@@ -1,0 +1,573 @@
+﻿html,
+body{
+    height: 100%;
+    width: 100%;
+    
+
+}
+
+/* INÍCIO DA EDIÇÃO NAVBAR  */
+/* Atera a cor da borda e do fundo do nav-bar. Navbar-inverse é o tipo de navbar usado no html  */
+.navbar-inverse{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+
+/* Atera a cor do nome do site. Brand refere-se ao nome do site  */
+/* Também altera a fonte do nome do site e a largura dela. Tbm adiciona o ícone */
+.navbar-inverse .navbar-brand {
+    color: #DCDCDC;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+}
+
+
+/* Atera a cor que o nome do site terá ao mover o cursor do mouse sobre ele (hover é para quando o mouse estiver sobre algo) */
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: whitesmoke;
+    background-color: transparent;
+}
+
+/* Atera a cor das outras secções do navbar, como estrutura, locais, notícias etc*/
+/* Também altera a fonte das outras secções do navbar e a largura delas. Cursor: point é apenas para criar efeito de ter algo para clicar*/
+.navbar-inverse .navbar-nav > li > a {
+    color: #DCDCDC;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    font-size: 13px;
+    cursor: pointer;
+}
+/* Atera a cor que as outras secções do navbar terão ao mover o cursor do mouse sobre ele (hover é para quando o mouse estiver sobre algo)  */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: whitesmoke;
+    background-color: transparent;
+}
+
+
+/* Altera a cor da borda do menuzinho do navbar quando ele estiver responsivo*/
+.navbar-inverse .navbar-toggle {
+    border-color: #DDD;
+}
+
+/* Altera a cor de fundo do menuzinho do navbar quando ele estiver responsivo, mas apenas quando o cursor estiver sobre ele (hover)*/
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+background-color: #F5F5F5;
+}
+
+/* Altera a cor das litras/traços do menuzinho do navbar quando ele estiver responsivo*/
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+
+
+/* FIM DA EDIÇÃO NAVBAR  */
+
+
+
+/* INÍCIO DA EDIÇÃO HEADER  */
+
+/* Altera a própria header. A posição, a largura, define a altura mínima como automática ... */
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url("header.jpg");
+  text-align: center;
+  color: white;
+}
+
+/* Altera a posição, o alinhamento da div, o padding da div e a largura da div, que está nomeado pela classe header-conteudo*/
+header .header-conteudo {
+  position: relative;
+  text-align: center;
+  padding: 100px 15px 100px;
+  width: 100%;
+}
+
+/* Altera especificamente o conteúdo de h1, dentro header-conteudo-interior, que está dentro de header-conteudo
+Altera a largura da fonte, transforma o texto em maiúsculo, a margem em cima e embaixoe o tamanho da fonte*/
+header .header-conteudo .header-conteudo-interior h1 {
+  padding-top: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 30px;
+  
+}
+
+/* Altera o conteúdo de hr, que está dentro de header-conteudo-interior*/
+header .header-conteudo .header-conteudo-interior hr {
+    border-color: white;
+    background-color: white;
+    color: white;
+    height: 3px;
+    width: 60px;
+}
+
+/* Altera especificamente o conteúdo de p, que está dentro de header-conteudo-interior, que está dentro de header-conteudo
+Altera o tipo de fonte, a largura da fonte, cor dela, o tamanho e a margem inferior*/
+header .header-conteudo .header-conteudo-interior p {
+  font-weight: 300;
+  color: #DCDCDC;
+  font-size: 16px;
+  margin-bottom: 50px;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Não entendi absolutamente nada dessa sintaxe*/
+@media (min-width: 768px) {
+  header {
+    min-height: 100%;
+  }
+  header .header-conteudo {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+  }
+  header .header-conteudo .header-conteudo-interior {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header .header-conteudo .header-conteudo-interior h1 {
+    font-size: 50px;
+  }
+  header .header-conteudo .header-conteudo-interior p {
+    font-size: 18px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*INÍCIO DA EDIÇÃO DO MODAL*/
+ 
+.modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+}
+ 
+.modal-content {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+}
+ 
+.modal-body {
+    padding: 0 25px 25px 25px;
+}
+ 
+.modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+}
+ 
+.modal-header, .modal-footer {
+    border: 0;
+}
+ 
+.modal-header .close {
+    float: none;
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: none;
+    opacity: 1;
+}
+
+/*INÍCIO DA EDIÇÃO VÍDEO*/
+
+.video-link {
+    padding-top: 60px;
+}
+ 
+ 
+ .glyphicon-play{
+    font-size: 50px;
+    top: 25%;
+    left: 3%;
+    color: white;
+ }
+.glyphicon-play:hover{
+    color: #DCDCDC;
+ }
+
+#sexo{
+  margin-top: -50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90px;
+  height: 90px;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 2px solid white;
+}
+
+.tooltip {
+    display: inline-block;
+    width: 200px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    padding: 12px;
+    margin-top: 18px;
+    margin-left: 4px;
+    transition: opacity 1s;
+
+}
+.tooltip > .tooltip-inner {
+  background-color: black;
+}
+
+/* FIM DA EDIÇÃO HEADER  */
+
+
+/* INÍCIO DA EDIÇÃO SOBRE NÓS  */
+
+/* altera a cor do hr, cuja classe é primeiro-hr-sobre */
+hr.primeiro-hr-sobre{
+    border-color: white;
+    background-color: white;
+    color: white;
+    height: 3px;
+    width: 60px;
+}
+/* altera a cor da primeira secção, cujo classe é 'primeira'  */
+.primeira-secao{
+  background-color: #F05F40;
+}
+
+/* altera o texto h2: a cor da fonte , a própria fote e a largura dela  */
+.primeira-secao > div > div > div > h2{
+    color: white;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+}
+
+/* altera o texto de p: a cor da fonte, a própria fote, o tamanho e a largura dela'  */
+.primeira-secao > div > div > div > p{
+    color: #F5F5F5;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.;
+
+}
+/* FIM DA EDIÇÃO SOBRE NÓS  */
+
+
+
+/* INÍCIO DA EDIÇÃO ESTRUTURA  */
+.segunda-secao{
+  background-color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+
+}
+.segunda-secao > div > div{
+  padding-top: 50px;
+}
+
+.segunda-secao > div > div > div > p{
+  color: #696969;
+}
+
+.glyphicon-estrutura{
+  font-size: 70px !important; 
+}
+
+/*.icone{
+  margin: auto;
+  width: 80px;
+    border-radius: 100px;
+  border: 10px orange;
+}*/
+
+.glyphicon-estrutura:hover{
+  color: #F05F40;
+  transition: opacity 1s; 
+}
+
+.segunda-secao > div > div > div > h3{
+  color: #F05F40;
+  font-weight: bolder;
+ 
+
+}
+
+
+/* FIM DA EDICÇÃO ESTRUTURA  */
+
+
+
+
+
+/* INÍSCIO DA EDIÇÃO NOSSAS EMPRESAS*/
+
+.terceira-secao{
+  padding-top: 20px;
+  background-color: white;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.terceira-secao > div > div > div >h2{
+  color: #1C1C1C;
+  font-weight: bolder;
+}
+
+.terceira-secao > div > div > div >p{
+  color: #1C1C1C;
+}
+
+#hr-nossasEmpresas{
+    border-color: #1C1C1C;
+    background-color: #1C1C1C;
+    color: #1C1C1C;
+    height: 3px;
+    width: 60px;
+}
+
+.empresas-text > h4{
+  font-weight: bolder;
+  color: black;
+  cursor: pointer;
+}
+
+
+/* FIM DA EDIÇÃO NOSSAS EMPRESAS*/
+
+/* INÍCIO DA EDIÇÃO CONTATO*/
+.quarta-secao{
+   background-color: #1C1C1C;
+   color: white;
+}
+
+.primeiro-hr-contato{
+    border-color: white;
+    background-color: white;
+    color: white;
+    height: 3px;
+    width: 60px;
+}
+
+.glyphicon{
+  font-size: 40px;
+}
+
+.texto-contato > h4{
+  color: #F05F40;
+  font-weight: bolder; 
+}
+
+.texto-contato-dois{
+  color: #F05F40;
+  font-weight: bolder;
+}
+
+textarea,
+input{
+   resize: none;
+   background-color: #f8f8f8;
+   border-color: #f8f8f8;
+   border-radius: 2px;
+   color: #919191;
+   border: 1px solid #f8f8f8;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#row-button{
+  padding-top: 10px;
+  /*padding-right: 50px;*/
+}
+
+/* FIM DA EDIÇÃO CONTATO/ESTRUTURA*/
+
+
+/* INÍCIO DA EDIÇÃO CRÉDITOS*/
+.quinta-secao{
+  background-color: pink;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.quinta-secao > div > div > div > div > div > p{
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* FIM DA EDIÇÃO CRÉDITOS*/
+
+
+
+/*
+http://www.htmlprogressivo.net/2014/01/Como-criar-um-formulario-completo-para-um-site.html
+
+https://www.w3schools.com/html/html_forms.asp
+
+http://www.w3schools.com/icons/bootstrap_icons_glyphicons.asp
+
+http://www.maujor.com/tutorial/propriedades-css-para-estilizacao-de-fontes.php
+
+http://dimsemenov.com/plugins/magnific-popup/documentation.html
+
+
+
+
+
+
+http://azmind.com/bootstrap-tutorial-modal-video/
+
+http://stackoverflow.com/questions/5271782/how-to-disable-the-resize-grabber-of-an-html-textarea
+
+http://www.tutorialrepublic.com/codelab.php?topic=faq&file=play-youtube-video-in-bootstrap-modal
+
+http://www.2work.com.br/coworking/planos/
+
+http://www2.ifrn.edu.br/itnc/itnc2/#parceiros
+
+https://developers.google.com/startups/accelerator/latam/
+
+https://docs.google.com/forms/d/e/1FAIpQLScmp2X9z27BSNqVGQ5ORFe3dqjOdZOBvYrnclOYgdCuruGdBg/viewform
+
+
+https://www.w3schools.com/howto/howto_css_tooltip.asp
+
+https://www.w3schools.com/bootstrap/bootstrap_tooltip.asp
+
+
+*/
+/* .modal-fullscreen 1 */
+
+.modal-fullscreen,
+.modal-fullscreen2,
+.modal-fullscreen3,
+.modal-fullscreen4,
+.modal-fullscreen5,
+.modal-fullscreen6 {
+  background: white;
+}
+.modal-fullscreen .modal-content,
+.modal-fullscreen2 .modal-content,
+.modal-fullscreen3 .modal-content,
+.modal-fullscreen4 .modal-content,
+.modal-fullscreen5 .modal-content,
+.modal-fullscreen6 .modal-content {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.modal-backdrop.modal-backdrop-fullscreen {
+  background: #ffffff;
+}
+.modal-backdrop.modal-backdrop-fullscreen.in {
+  opacity: .97;
+  filter: alpha(opacity=97);
+}
+
+.modal-title{
+  font-weight: bolder;
+}
+
+.glyphicon-remove {
+  cursor: pointer;
+}
+.glyphicon-remove:hover {
+  background-color: grey;
+}
+
+.modal-header{
+  margin-top: -80px;
+}
+
+/* .modal-fullscreen size: we use Bootstrap media query breakpoints */
+
+.modal-fullscreen .modal-dialog,
+.modal-fullscreen2 .modal-dialog,
+.modal-fullscreen3 .modal-dialog,
+.modal-fullscreen4 .modal-dialog,
+.modal-fullscreen5 .modal-dialog,
+.modal-fullscreen6 .modal-dialog {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .modal-fullscreen .modal-dialog,
+  .modal-fullscreen2 .modal-dialog,
+  .modal-fullscreen3 .modal-dialog,
+  .modal-fullscreen4 .modal-dialog,
+  .modal-fullscreen5 .modal-dialog,
+  .modal-fullscreen6 .modal-dialog {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-fullscreen .modal-dialog,
+  .modal-fullscreen2 .modal-dialog,
+  .modal-fullscreen3 .modal-dialog,
+  .modal-fullscreen4 .modal-dialog,
+  .modal-fullscreen5 .modal-dialog,
+  .modal-fullscreen6 .modal-dialog {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-fullscreen .modal-dialog,
+  .modal-fullscreen2 .modal-dialog,
+  .modal-fullscreen3 .modal-dialog,
+  .modal-fullscreen4 .modal-dialog,
+  .modal-fullscreen5 .modal-dialog,
+  .modal-fullscreen6 .modal-dialog {
+     width: 1170px;
+  }
+}
+
+/*.troco-preto{
+  position: absolute;
+  background-color: black;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.troco-preto:hover{
+  opacity: 0.5;
+}*/
